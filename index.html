@@ -15,16 +15,42 @@
         <div class="dot"></div>
         <ul class="contact">
             <li>
-                <a href="form/form.html">Contacto</a>
+                <a onclick="popupToggle();" href="#">Contact</a>
+                <div id="popup">
+                    <div class="content">
+                        <h3>Welcome</h3>
+                        <p>Get in touch!</p>
+                        <div class="inputBox">
+                            <form id="capform" action="enviar.php" class="formulario" method="post">
+                                <input type="text" id="nombre" class="nombre" name="nombre" placeholder="Nombre" required>
+                                <input type="email" id="email" class="email" name="email" placeholder="Email" required multiple>
+                                <textarea id="mensaje" class="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                                <input type="submit" value="Send" class="btn">
+                            </form>
+                        </div>
+                    </div>        
+                    <a class="close" onclick="popupToggle();"><img src="img/close.png" alt="close"></a>
+                </div>
             </li>
         </ul>
-    </section>
+    </section>    
     <script>
+        function popupToggle()
+        {
+            const popup = document.getElementById('popup');
+            popup.classList.toggle('popup')
+        }
+    </script>
+    <script>
+        const mail = document.querySelector('popup');
         const dot = document.querySelector('.dot');
         const sec = document.querySelector('.sec');
-        dot.onclick = function(){
+        const a = document.querySelector('a');
+        dot.ondblclick = function(){
             dot.classList.toggle('active')
             sec.classList.toggle('active')
+            a.classList.toggle('active')
+            popup.classList.toggle('active')
         }
         document.addEventListener("mousemove", function(e){
             const dot = document.querySelector('.dot');
