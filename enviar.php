@@ -18,5 +18,5 @@ $asunto = 'Contacto desde UTOPIA';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
 
-header("Location:index.html");
+header("Location:https://utopiarea.com/");
 ?>
