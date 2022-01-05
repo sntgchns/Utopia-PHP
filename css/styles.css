@@ -26,9 +26,9 @@
 .sec .dot
 {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #fff;
+    width: 15px;
+    height: 15px;
+    background: #7f6f00;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     cursor: default;
@@ -37,18 +37,18 @@
 }
 .sec .dot:active
 {
-    box-shadow: 0 0 0 200vh #fff;
-    border: 2px solid #000;
+    box-shadow: 0 0 0 200vh #7f6f00;
+    border: 2px solid #6d0064;
 }
 .sec .dot.active
 {
-    background: #000;
-    border: 2px solid #000;
+    background: #6d0064;
+    border: 2px solid #6d0064;
 }
 .sec .dot.active:active
 {
-    box-shadow: 0 0 0 200vh #000;
-    border: 2px solid #fff;    
+    box-shadow: 0 0 0 200vh #6d0064;
+    border: 2px solid #7f6f00;    
 }
 .sec .dot::before
 {
@@ -58,14 +58,14 @@
     left: 50px;
     white-space: nowrap;
     transform: translateY(-50%);
-    color: #fff;
+    color: #7f6f00;
     font-size: 1.5em;
     font-weight: 500;
 }
 .sec .dot.active::before
 {
     content: '';
-    color: #000;
+    color: #6d0064;
 }
 .sec h2
 {
