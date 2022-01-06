@@ -258,6 +258,11 @@ visibility: hidden;
 {    
   .sec .dot
   {
-      display: none;
+      background: transparent;
+  }
+  .sec .dot.active
+  {
+      background: transparent;
+      border: 2px solid transparent;
   }
 }
