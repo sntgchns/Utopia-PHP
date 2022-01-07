@@ -8,12 +8,12 @@ $mail = new PHPMailer;
 //$mail->SMTPDebug = 3;                                             // Enable verbose debug output
 
 $mail->isSMTP();                                                    // Set mailer to use SMTP
-$mail->Host = host;                                      // Specify main and backup SMTP servers
+$mail->Host = secret[0];                                      // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                                             // Enable SMTP authentication
-$mail->Username = username;                         // SMTP username
-$mail->Password = password;                                 // SMTP password
+$mail->Username = secret[1];                         // SMTP username
+$mail->Password = secret[2];                                 // SMTP password
 $mail->SMTPSecure = 'tls';                                          // Enable TLS encryption, `ssl` also accepted
-$mail->Port = port;                                                  // TCP port to connect to
+$mail->Port = secret[3];                                                  // TCP port to connect to
 $mail->CharSet = 'UTF-8';
 
 $mail->From = $_POST['email'];

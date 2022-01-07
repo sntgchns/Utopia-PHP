@@ -1,6 +1,8 @@
 <?php
-    define('host', 'smtp.ionos.es');
-    define('username', 'info@utopiansworld.com');
-    define('password', 'O[sga]ANI77INA');
-    define('port', '587');
+define(secret, array(
+        'smtp.ionos.es', 
+        'info@utopiansworld.com', 
+        'O[sga]ANI77INA', 
+        '587'
+    ));
 ?>
