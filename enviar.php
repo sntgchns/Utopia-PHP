@@ -33,13 +33,13 @@ $mail->isHTML(true);                                                // Set email
 
 $mail->Subject = 'Contact from UTOPIA';
 // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->Body    = "<html><body style='display: inline-block; background: rgb(221, 199, 161); border: 6px solid green;'><div style='display: flex; justify-content: center; background: rgb(109,0,100);'><h1 style='color: rgb(222,222,222); text-transform: uppercase;'>Utopia</h1></div><div style='display: inline-block; padding: 10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Este mensaje fue enviado por: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{$_POST['nombre']}</p></div><br><div style='display: inline-block; padding:10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Su e-mail es: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{$_POST['email']}</p></div><br><div style='display: inline-block; padding:10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Mensaje: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{$_POST['mensaje']}</p></div></body></html>";
+$mail->Body    = "<html><body style='display: inline-block; background: rgb(221, 199, 161); border: 6px solid green;'><div style='display: flex; justify-content: center; background: rgb(109,0,100);'><h1 style='color: rgb(222,222,222); text-transform: uppercase;'>Utopia</h1></div><div style='display: inline-block; padding: 10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Este mensaje fue enviado por: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{$mail->FromName}</p></div><br><div style='display: inline-block; padding:10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Su e-mail es: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{$mail->From}</p></div><br><div style='display: inline-block; padding:10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Mensaje: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{$_POST['mensaje']}</p></div></body></html>";
 // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    header("Location:thanks.html");
+    header("Location:thanks.php");
 }
 ?>
