@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/404.css">
 </head>
 <body>
-    <h1>It seems that the page you are looking for is not written yet, come and create it in <a href="https://utopiansworld.com">UTOPIA!</a></h1>
+    <h1>It seems that the page you are looking for is not written yet, come and create it in 
+        <a href="https://utopiansworld.com">UTOPIA!</a>
+    </h1>
+    <meta http-equiv="refresh" content="6; url='https://utopiansworld.com/'">
 </body>
 </html>
